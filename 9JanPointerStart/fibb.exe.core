@@ -1,0 +1,19 @@
+[main] fibb 1000 (0) exception: trapped!
+[main] fibb 1000 (0) exception: code 0xC0000005 at 0x61055899
+[main] fibb 1000 (0) exception: ax 0x1 bx 0x1 cx 0x53 dx 0x1
+[main] fibb 1000 (0) exception: si 0x0 di 0x244FD10 bp 0x244FAD8 sp 0x244FAD4
+[main] fibb 1000 (0) exception: exception is: STATUS_ACCESS_VIOLATION
+[main] fibb 1000 (0) stack: Stack trace:
+[main] fibb 1000 (0) stack: frame 0: sp = 0x244F674, pc = 0x6100A2C3
+[main] fibb 1000 (0) stack: frame 1: sp = 0x244F6B0, pc = 0x7734B499
+[main] fibb 1000 (0) stack: frame 2: sp = 0x244F6D4, pc = 0x7734B46B
+[main] fibb 1000 (0) stack: frame 3: sp = 0x244F784, pc = 0x77300133
+[main] fibb 1000 (0) stack: frame 4: sp = 0x244FAD8, pc = 0x61058EA4
+[main] fibb 1000 (0) stack: frame 5: sp = 0x244FD70, pc = 0x6105845C
+[main] fibb 1000 (0) stack: frame 6: sp = 0x244FD88, pc = 0x61053F31
+[main] fibb 1000 (0) stack: frame 7: sp = 0x244FDA0, pc = 0x4010D0
+[main] fibb 1000 (0) stack: frame 8: sp = 0x244FDC4, pc = 0x4010FE
+[main] fibb 1000 (0) stack: frame 9: sp = 0x244FDE4, pc = 0x61004402
+[main] fibb 1000 (0) stack: frame 10: sp = 0x244FF50, pc = 0x61004420
+[main] fibb 1000 (0) handle_exceptions: Exception: STATUS_ACCESS_VIOLATION
+[main] fibb 1000 (0) handle_exceptions: Error while dumping state (probably corrupted stack)

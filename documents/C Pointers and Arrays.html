@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://www.programiz.com/c-programming/c-pointers-arrays -->
+<html lang="en" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+<link rel="shortlink" href="http://www.programiz.com/node/37">
+<link rel="shortcut icon" href="http://www.programiz.com/sites/tutorial2program/files/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="canonical" href="./C Pointers and Arrays_files/C Pointers and Arrays.html">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<meta name="description" content="Arrays are closely related to pointers in C programming. Arrays and pointers are synonymous in terms of how they use to access memory. But, a pointer variable can take different addresses as value whereas, in case of array it is fixed....">
+<meta name="keywords" content="C Pointers and Arrays, C Programming Pointers and Arrays, Pointers and Arrays in C programming.">
+  <title>C Pointers and Arrays</title>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link href="./C Pointers and Arrays_files/css" rel="stylesheet" type="text/css">
+  <link type="text/css" rel="stylesheet" href="./C Pointers and Arrays_files/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all">
+<link type="text/css" rel="stylesheet" href="./C Pointers and Arrays_files/css_jk2gOoxxFe7OkbYeq7m-s6vZPGMnD9wrloLYkoJY0b4.css" media="all">
+<link type="text/css" rel="stylesheet" href="./C Pointers and Arrays_files/css_MnXiytJtb186Ydycnpwpw34cuUsHaKc80ey5LiQXhSY.css" media="all">
+<link type="text/css" rel="stylesheet" href="./C Pointers and Arrays_files/css_cv063AFWEN5vYokgiw30rIdwm2bqSKcxdgykautGtHI.css" media="all">
+<link type="text/css" rel="stylesheet" href="./C Pointers and Arrays_files/css_DqiuSTbynplXJ3hy5abg6z0YV95ZsETceC1DnBGkts4.css" media="screen">
+  <script type="text/javascript" async="" src="./C Pointers and Arrays_files/ga.js"></script><script type="text/javascript" src="./C Pointers and Arrays_files/js_xAPl0qIk9eowy_iS9tNkCWXLUVoat94SQT48UBCFkyQ.js"></script>
+<script type="text/javascript" src="./C Pointers and Arrays_files/js_3kpuFG9hplasnVNukLtlogTthC4yQ3rb-C3J9yFlU4c.js"></script>
+<script type="text/javascript" src="./C Pointers and Arrays_files/js_rv_BKYv7yieH0IgHddhWHDC-bWGan8yiJbusyOpr0mw.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-36675496-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+<script type="text/javascript" src="./C Pointers and Arrays_files/js_t2LagZoPpSsWZLoLvt1JntkbR51X0BoFlsMN4kQfmHo.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"programiz","theme_token":"im8QUJRTp9AHdg2l9JQuz6ErX9in_QtJUgHIF90_sE4","js":{"sites\/all\/libraries\/prettify\/src\/prettify.js":1,"sites\/all\/modules\/prettify\/prettify.loader.js":1,"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/google_analytics_reports\/google_analytics_reports\/google_analytics_reports.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/all\/themes\/programiz\/programiz.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/google_analytics_reports\/google_analytics_reports\/google_analytics_reports.css":1,"sites\/all\/modules\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/themes\/programiz\/programiz.css":1,"sites\/all\/modules\/prettify\/styles\/desert.css":1}},"googleAnalyticsReportsAjaxUrl":"\/google-analytics-reports\/ajax","prettify":{"linenums":false,"match":"","nocode":"nocode","custom":[],"markup":{"code":true,"pre":true,"precode":false}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"}});
+//--><!]]>
+</script>
+
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-37 node-type-c-programming">
+  <div id="skip-link">
+    <a href="http://www.programiz.com/c-programming/c-pointers-arrays#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <!-- Header starts -->
+<header id="pageHeader" class="cf" role="banner">
+<div class="headerWrapper">
+<div class="headerContent cf"> <a href="http://www.programiz.com/" title="Home">Programming Tutorials, Articles and Examples</a>
+</div>
+
+</div></header>
+<!-- Header end -->
+
+<!-- Main Navigation starts-->
+<nav id="mainNav" role="navigation">
+<h2>Main Menu</h2><ul class="expand"><li class="menu-227 first"><a href="http://www.programiz.com/">Home</a></li>
+<li class="menu-633"><a href="http://www.programiz.com/c-programming">C Programming</a></li>
+<li class="menu-568"><a href="http://www.programiz.com/cpp-programming" title="C++ Programming Tutorial">C++</a></li>
+<li class="menu-1647 last"><a href="http://www.programiz.com/python-programming" title="Python Programming Tutorial">Python</a></li>
+</ul></nav>
+<!-- Main Navigation ends-->
+
+<!-- Fixed navigation slide starts
+<div class="fixedNav cf">
+  <div class="fixWrapper">
+    <div class="fixLogo">Programiz Logo</div>
+    <ul class="fixSocial">
+      <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://www.programiz.com/c-programming/c-pointers-arrays">Share on Facebook</a></li>
+      <li><a href="https://twitter.com/share?url=http://www.programiz.com/c-programming/c-pointers-arrays">Share on Twitter</a></li>
+    </ul>
+  </div>
+</div> -->
+
+<article id="main" role="main">
+  
+<div id="content">
+	
+<!-- Content Top Starts -->	
+	<!-- Content Top Ends -->	
+
+    
+<!-- Main Content Starts-->
+    <section class="mainContent">
+	            <h1>C Programming Pointers and Arrays</h1>                
+        	<div class="contentInside">
+	    	  <div class="region region-content-inside">
+      
+    <script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- programiz (new) -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-9007421361448641" data-ad-slot="8228194420"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  </div>
+ 	</div>
+				
+	 	<div class="tabs"></div>	    		       	  <div class="region region-content">
+      
+    <div id="node-37" class="node node-c-programming node-promoted clearfix">
+       
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>Arrays are closely related to pointers in C programming but the important difference between them is that, a pointer variable can take different addresses as value whereas, in case of array it is fixed. This can be demonstrated by an example:</p>
+<pre class="prettyprint"><code><span class="pln">
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">(){</span><span class="pln">
+   </span><span class="kwd">char</span><span class="pln"> c</span><span class="pun">[</span><span class="lit">4</span><span class="pun">];</span><span class="pln">
+   </span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">;</span><span class="pln">
+   </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">i</span><span class="pun">&lt;</span><span class="lit">4</span><span class="pun">;++</span><span class="pln">i</span><span class="pun">){</span><span class="pln">
+      printf</span><span class="pun">(</span><span class="str">"Address of c[%d]=%x\n"</span><span class="pun">,</span><span class="pln">i</span><span class="pun">,&amp;</span><span class="pln">c</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]);</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<pre class="prettyprint"><samp><span class="typ">Address</span><span class="pln"> of c</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]=</span><span class="lit">28ff44</span><span class="pln">
+</span><span class="typ">Address</span><span class="pln"> of c</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]=</span><span class="lit">28ff45</span><span class="pln">
+</span><span class="typ">Address</span><span class="pln"> of c</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]=</span><span class="lit">28ff46</span><span class="pln">
+</span><span class="typ">Address</span><span class="pln"> of c</span><span class="pun">[</span><span class="lit">3</span><span class="pun">]=</span><span class="lit">28ff47</span></samp></pre>
+<p>Notice, that there is equal difference (difference of 1 byte) between any two consecutive elements of array.</p><p class="note"><strong>Note:</strong> You may get different address of an array.</p><h2>Relation between Arrays and Pointers</h2><p>Consider and array:</p>
+<pre class="prettyprint"><span class="kwd">int</span><span class="pln"> arr</span><span class="pun">[</span><span class="lit">4</span><span class="pun">];</span></pre>
+<p style="text-align: center; "><img alt="Relation between arrays and pointers" class="figure" src="./C Pointers and Arrays_files/array-as-pointers.jpg" style="width: 263px; height: 99px; " title="Arrays as Pointers"></p><p>In arrays of C programming, name of the array always points to the first element of an array. Here, address of first element of an array is <code class="prettyprint"><span class="pun">&amp;</span><span class="pln">arr</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span></code>. Also, <var>arr</var> represents the address of the pointer where it is pointing. Hence, <code class="prettyprint"><span class="pun">&amp;</span><span class="pln">arr</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">is</span><span class="pln"> equivalent to </span></code><var>arr</var>.</p><p>Also, value inside the address <code class="prettyprint"><span class="pun">&amp;</span><span class="pln">arr</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span></code> and address <var>arr</var> are equal. Value in address <code class="prettyprint"><span class="pun">&amp;</span><span class="pln">arr</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span></code> is <code class="prettyprint"><span class="pln">arr</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span></code> and value in address<var> arr</var> is <code class="prettyprint"><span class="pun">*</span><span class="pln">arr</span></code>. Hence, <code class="prettyprint"><span class="pln">arr</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">is</span><span class="pln"> equivalent to </span><span class="pun">*</span><span class="pln">arr</span></code>.</p><p>Similarly,</p>
+<pre class="prettyprint"><span class="pun">&amp;</span><span class="pln">a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">is</span><span class="pln"> equivalent to </span><span class="pun">(</span><span class="pln">a</span><span class="pun">+</span><span class="lit">1</span><span class="pun">)</span><span class="pln">  AND</span><span class="pun">,</span><span class="pln"> a</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">is</span><span class="pln"> equivalent to </span><span class="pun">*(</span><span class="pln">a</span><span class="pun">+</span><span class="lit">1</span><span class="pun">).</span><span class="pln">
+</span><span class="pun">&amp;</span><span class="pln">a</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">is</span><span class="pln"> equivalent to </span><span class="pun">(</span><span class="pln">a</span><span class="pun">+</span><span class="lit">2</span><span class="pun">)</span><span class="pln">  AND</span><span class="pun">,</span><span class="pln"> a</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">is</span><span class="pln"> equivalent to </span><span class="pun">*(</span><span class="pln">a</span><span class="pun">+</span><span class="lit">2</span><span class="pun">).</span><span class="pln">
+</span><span class="pun">&amp;</span><span class="pln">a</span><span class="pun">[</span><span class="lit">3</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">is</span><span class="pln"> equivalent to </span><span class="pun">(</span><span class="pln">a</span><span class="pun">+</span><span class="lit">1</span><span class="pun">)</span><span class="pln">  AND</span><span class="pun">,</span><span class="pln"> a</span><span class="pun">[</span><span class="lit">3</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">is</span><span class="pln"> equivalent to </span><span class="pun">*(</span><span class="pln">a</span><span class="pun">+</span><span class="lit">3</span><span class="pun">).</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">
+</span><span class="pun">&amp;</span><span class="pln">a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">is</span><span class="pln"> equivalent to </span><span class="pun">(</span><span class="pln">a</span><span class="pun">+</span><span class="pln">i</span><span class="pun">)</span><span class="pln">  AND</span><span class="pun">,</span><span class="pln"> a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]</span><span class="pln"> </span><span class="kwd">is</span><span class="pln"> equivalent to </span><span class="pun">*(</span><span class="pln">a</span><span class="pun">+</span><span class="pln">i</span><span class="pun">).</span></pre>
+<p>In C, you can declare an array and can use pointer to alter the data of an array.</p>
+<pre class="prettyprint"><code><span class="com">//Program to find the sum of six numbers with arrays and pointers.</span><span class="pln">
+</span><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+</span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">(){</span><span class="pln">
+  </span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">,</span><span class="kwd">class</span><span class="pun">[</span><span class="lit">6</span><span class="pun">],</span><span class="pln">sum</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+  printf</span><span class="pun">(</span><span class="str">"Enter 6 numbers:\n"</span><span class="pun">);</span><span class="pln">
+  </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">i</span><span class="pun">&lt;</span><span class="lit">6</span><span class="pun">;++</span><span class="pln">i</span><span class="pun">){</span><span class="pln">
+      scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,(</span><span class="kwd">class</span><span class="pun">+</span><span class="pln">i</span><span class="pun">));</span><span class="pln"> </span><span class="com">// (class+i) is equivalent to &amp;class[i]</span><span class="pln">
+      sum </span><span class="pun">+=</span><span class="pln"> </span><span class="pun">*(</span><span class="kwd">class</span><span class="pun">+</span><span class="pln">i</span><span class="pun">);</span><span class="pln"> </span><span class="com">// *(class+i) is equivalent to class[i]</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  printf</span><span class="pun">(</span><span class="str">"Sum=%d"</span><span class="pun">,</span><span class="pln">sum</span><span class="pun">);</span><span class="pln">
+  </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre>
+<p><strong>Output</strong></p>
+<pre class="prettyprint"><samp><span class="typ">Enter</span><span class="pln"> </span><span class="lit">6</span><span class="pln"> numbers</span><span class="pun">:</span><span class="pln">
+</span><span class="lit">2</span><span class="pln">
+</span><span class="lit">3</span><span class="pln">
+</span><span class="lit">4</span><span class="pln">
+</span><span class="lit">5</span><span class="pln">
+</span><span class="lit">3</span><span class="pln">
+</span><span class="lit">4</span><span class="pln">
+</span><span class="typ">Sum</span><span class="pun">=</span><span class="lit">21</span></samp></pre>
+</div></div></div>	
+</div>
+
+
+</div>
+  </div>
+       	    </section>
+<!-- Main Content Ends-->
+
+<!-- Content Bottom Starts -->
+    <div class="mainBottom">
+	    	  <div class="region region-content-bottom">
+      
+    
+<div class="chapter cf">
+	  <div class="prev"><a href="http://www.programiz.com/c-programming/c-pointers"> ◄ Previous Page</a></div>
+  <div class="next"><a href="http://www.programiz.com/c-programming/c-pointer-functions">Next Page ► </a></div>
+</div>
+  
+    <div class="cf">
+
+<div id="mediaNetLeft">
+<script id="mNCC" language="javascript">  medianet_width='300';  medianet_height= '250';  medianet_crid='683527876';  </script>  <script id="mNSC" src="http://contextual.media.net/nmedianet.js?cid=8CU166D9L" language="javascript"></script> 
+</div>
+
+<div id="mediaNetRight">
+<!-- BEGIN TAG - DO NOT MODIFY -->
+<script type="text/javascript">
+//<![CDATA[
+epom_key = "b2f9a437525c27d603659d62218f9c13";
+epom_channel = "";
+epom_code_format = "ads-sync.js";
+epom_ads_host = "//www.adshost2.com";
+epom_click = "";
+epom_custom_params = {};
+
+document.write("<script type='text\/javascript' src='"+(location.protocol == 'https:' ? 'https:' : 'http:') + "//www.adshost2.com\/js/show_ads.js'><\/script>");
+//]]>
+</script><script type="text/javascript" src="http://www.adshost2.com/js/show_ads.js"></script>
+<!-- END TAG -->					
+</div>
+
+</div>  </div>
+    </div>
+
+<!-- Content Bottom Ends -->
+  </div>
+
+<!-- Left sidebar Starts -->
+  <aside id="sidebar" role="complementary">
+      <div class="region region-sidebar-left">
+      
+    <nav role="navigation"><h2>C Programming</h2><ul class="topMenu"><li><h3>C Introduction<span class="indicatorHide"></span></h3><ul class="subMenu invisible"><li><a href="http://www.programiz.com/c-programming/c-keywords-identifier" target="_top">Keywords &amp;&nbsp;Identifier</a></li><li><a href="http://www.programiz.com/c-programming/c-variables-constants" target="_top">Variables &amp;&nbsp;Constants</a></li><li><a href="http://www.programiz.com/c-programming/c-data-types" target="_top">C Data Types</a></li><li><a href="http://www.programiz.com/c-programming/c-input-output" target="_top">C Input/Output</a></li><li><a href="http://www.programiz.com/c-programming/c-operators" target="_top">C Operators</a></li><li><a href="http://www.programiz.com/c-programming/c-introduction-examples" target="_top">C Introduction Examples</a></li></ul></li><li><h3>C Flow Control<span class="indicatorHide"></span></h3><ul class="subMenu invisible"><li><a href="http://www.programiz.com/c-programming/c-if-else-statement" target="_top">C&nbsp;if...else</a></li><li><a href="http://www.programiz.com/c-programming/c-for-loop" target="_top">C for Loop</a></li><li><a href="http://www.programiz.com/c-programming/c-do-while-loops" target="_top">C do...while Loop</a></li><li><a href="http://www.programiz.com/c-programming/c-break-continue-statement" target="_top">C break and&nbsp;continue</a></li><li><a href="http://www.programiz.com/c-programming/c-switch-case-statement" target="_top">C&nbsp;switch...case</a></li><li><a href="http://www.programiz.com/c-programming/c-goto-statement">C Programming goto</a></li><li><a href="http://www.programiz.com/c-programming/c-decision-making-loops-examples" target="_top">Control Flow Examples</a></li></ul></li><li><h3>C Functions<span class="indicatorHide"></span></h3><ul class="subMenu invisible"><li><a href="http://www.programiz.com/c-programming/c-functions" target="_top">C Programming Functions</a></li><li><a href="http://www.programiz.com/c-programming/c-user-defined-functions" target="_top">C User-defined Functions</a></li><li><a href="http://www.programiz.com/c-programming/types-user-defined-functions">C&nbsp;Function Types</a></li><li><a href="http://www.programiz.com/c-programming/c-recursion" target="_top">C Recursion</a></li><li><a href="http://www.programiz.com/c-programming/c-storage-class" target="_top">C Storage Class</a></li><li><a href="http://www.programiz.com/c-programming/c-functions-examples" target="_top">C Function Examples</a></li></ul></li><li><h3>C Programming Arrays<span class="indicatorHide"></span></h3><ul class="subMenu invisible"><li><a href="http://www.programiz.com/c-programming/c-arrays">C Programming Arrays</a></li><li><a href="http://www.programiz.com/c-programming/c-multi-dimensional-arrays" target="_top">C Multi-dimensional Arrays</a></li><li><a href="http://www.programiz.com/c-programming/c-arrays-functions" target="_top">C Arrays &amp; Functions</a></li><li><a href="http://www.programiz.com/c-programming/c-arrays-examples" target="_top">C Arrays Examples</a></li></ul></li><li><h3>C Programming Pointers<span class="indicatorShow"></span></h3><ul class="subMenu visible"><li><a href="http://www.programiz.com/c-programming/c-pointers" target="_top">C Programming Pointers</a></li><li><a href="./C Pointers and Arrays_files/C Pointers and Arrays.html" target="_top" class="currentPage">C Pointers &amp;&nbsp;Arrays</a></li><li><a href="http://www.programiz.com/c-programming/c-pointer-functions" target="_top">C Pointers And Functions</a></li><li><a href="http://www.programiz.com/c-programming/c-dynamic-memory-allocation" target="_top">C Memory Allocation</a></li><li><a href="http://www.programiz.com/c-programming/c-pointer-examples" target="_top">C Pointer Examples</a></li></ul></li><li><h3>C Programming Strings<span class="indicatorHide"></span></h3><ul class="subMenu invisible"><li><a href="http://www.programiz.com/c-programming/c-strings">C Programming String</a></li><li><a href="http://www.programiz.com/c-programming/string-handling-functions" target="_top">C String Functions</a></li><li><a href="http://www.programiz.com/c-programming/c-string-examples">C String Examples</a></li></ul></li><li><h3>Structure And Union<span class="indicatorHide"></span></h3><ul class="subMenu invisible"><li><a href="http://www.programiz.com/c-programming/c-structures" target="_top">C Structure</a></li><li><a href="http://www.programiz.com/c-programming/c-structures-pointers" target="_top">Structures &amp;&nbsp;Pointers</a></li><li><a href="http://www.programiz.com/c-programming/c-structure-function" target="_top">C Structure &amp;&nbsp;Function</a></li><li><a href="http://www.programiz.com/c-programming/c-unions" target="_top">C Programming&nbsp;Union</a></li><li><a href="http://www.programiz.com/c-programming/c-structure-examples" target="_top">Structure Examples</a></li></ul></li><li><h3>C Programming Files<span class="indicatorHide"></span></h3><ul class="subMenu invisible"><li><a href="http://www.programiz.com/c-programming/c-file-input-output" target="_top">C Files Input/Output</a></li><li><a href="http://www.programiz.com/c-programming/c-file-examples">C Files Examples</a></li></ul></li><li><h3>Additional Topics<span class="indicatorHide"></span></h3><ul class="subMenu invisible"><li><a href="http://www.programiz.com/c-programming/c-enumeration" target="_top">C&nbsp;Enumeration</a></li><li><a href="http://www.programiz.com/c-programming/c-preprocessor-macros" target="_top">C&nbsp;Preprocessors</a></li><li><a href="http://www.programiz.com/c-programming/library-function">C Library Functions</a></li><li><a href="http://www.programiz.com/c-programming/examples">C Programming Examples</a></li></ul></li></ul></nav>  
+    <script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 300 * 600 (sidebar bottom) -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-9007421361448641" data-ad-slot="6773310825"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+    <script async="" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- medium rectangle latest -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-9007421361448641" data-ad-slot="3518793228"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  </div>
+  </aside>
+<!-- Left sidebar Ends -->
+
+<!-- Footer Right and Footer Left Starts-->
+  <div class="bottom cf">
+	</div>
+<!-- Footer Right and Footer Left Ends-->
+</article>
+
+<footer id="footer">
+
+
+
+  <div class="footerContent"> <a href="http://www.programiz.com/" class="footerLogo">Programiz - Programming Tutorial</a>
+    <ul class="navFooter">
+      <li><a href="http://www.programiz.com/about-us">About Us</a></li>
+      <li><a href="http://www.programiz.com/contact">Contact Us</a></li>
+      <li><a href="http://www.programiz.com/articles">Articles</a></li>
+      <li><a href="http://www.programiz.com/advertising">Advertise With Us</a></li>
+    </ul>
+  </div>
+  <div class="copyRight" role="contentinfo">
+    <p>Copyright © by Programiz | All rights reserved | <a href="http://www.programiz.com/privacy-policy">Privacy Policy</a></p>
+  </div>
+</footer>  <script type="text/javascript" src="./C Pointers and Arrays_files/js_p4XrdhRxUcPvVFVqUZka6H428DAuEmMbYhsMEYf4Zok.js"></script>
+<script type="text/javascript" src="./C Pointers and Arrays_files/js_RSIUCcrmRUFMf95PjTZVGDL8QH9jNpz8LNaNofgcAAc.js"></script>
+
+
+
+</body></html>
