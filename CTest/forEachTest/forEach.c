@@ -31,3 +31,10 @@ int forEach_char(char *array, void (*operation)(char,int,char *), int length){
 	return 1;
 }
 
+int foreach_string(char **strArray,void (*operation)(char *,int,char **),int len){
+	int i;
+	for(i=0;i<len;i++){
+		operation(strArray[i],i,strArray);
+	}
+	return 1;
+};

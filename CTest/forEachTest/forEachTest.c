@@ -9,24 +9,6 @@ void square(int ele,int index,int *array){
 	array[index]=ele*ele;
 }
 
-void cube(float ele,int index,float *array){
-	array[index]=ele*ele*ele;
-}
-
-void replace(char ele,int index, char *array){
-	array[index]='0';
-}
-
-void upper(char *str,int index,char **array){
-	int i;
-	int l = strlen(str);
-	for (i = 0; i < l; i++)
-	{
-		str[i] = toupper(str[i]);
-	}
-}
-
-
 void test_foreach_retuns_zero_if_array_length_is_zero(){
 	int *array,length=0;
 	void (*operation)(int,int,int*)=&square;
@@ -48,6 +30,11 @@ void test_foreach_changes_the_array_after_exccution(){
 
 }
 
+void cube(float ele,int index,float *array){
+	array[index]=ele*ele*ele;
+}
+
+
 void test_foreach_float_retuns_zero_if_array_length_is_zero(){
 	float *array;
 	int length=0;
@@ -68,6 +55,10 @@ void test_foreach_float_changes_the_array_after_exccution(){
 	assertEqual(array[1], 8.000000);
 	assertEqual(array[2], 27.000000);
 
+}
+
+void replace(char ele,int index, char *array){
+	array[index]='0';
 }
 
 void test_foreach_char_retuns_zero_if_array_length_is_zero(){
@@ -92,4 +83,34 @@ void test_foreach_char_changes_the_array_after_exccution(){
 
 }
 
+void upper(char *str,int index,char **array){
+	int i;
+	for ( i = 0; i < strlen(str); i++)
+	{
+		str[i]=toupper((str)[i]);
+	}
+}
 
+void test_foreach_string_changes_the_array_after_exccution(){
+	char str1[] = {'p','o','o','j','a','\0'};
+	char str2[] = {'b','a','n','t','y','\0'};
+	char str3[] = {'g','u','r','a','v','\0'};
+	char *strArray[] = {str1,str2,str3};
+	int len = 3;
+	assertEqual(foreach_string(strArray,upper,len), 1);
+	assertEqual(strcmp(strArray[0],"POOJA"),0);
+	assertEqual(strcmp(strArray[1],"BANTY"),0);
+	assertEqual(strcmp((strArray)[2],"GURAV"),0);
+}
+
+void test_foreach_string_changes_the_string_after_exccution(){
+	char str1[] = "pooja";
+	char str2[] = "banty";
+	char str3[] = "gurav";
+	char *strArray[] = {str1,str2,str3};
+	int len = 3;
+	assertEqual(foreach_string(strArray,upper,len), 1);
+	assertEqual(strcmp(strArray[0],"POOJA"),0);
+	assertEqual(strcmp(strArray[1],"BANTY"),0);
+	assertEqual(strcmp((strArray)[2],"GURAV"),0);
+}
