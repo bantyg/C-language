@@ -2,18 +2,18 @@ typedef struct LinkedList LinkedList;
 typedef struct Node Node;
 
 struct LinkedList{
-	void* head;
-	void* tail;
+	Node* head;
+	Node* tail;
 	int count;
 };
 
 struct Node{
-	int data;
-	void* next;
+	void* data;
+	Node* next;
 };
 
 LinkedList createList();
-Node create_node(void* data);
+Node* create_node(void* data);
 int add_to_list(LinkedList *,Node *);
 void *get_first_element(LinkedList list);
 void *get_last_element(LinkedList list);
