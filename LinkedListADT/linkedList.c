@@ -46,3 +46,42 @@ void traverse(LinkedList list, void (*func)(void* data)) {
 		walker = walker->next;
 	}
 }
+
+void * getElementAt(LinkedList l1, int index ){
+	int i;
+	Node* walker = l1.head;
+	if(index>=l1.count){
+		return NULL;
+	}
+	for ( i = 0; i<index; i++){
+		walker = walker->next;
+	}
+		return &(walker->data);
+}
+
+int indexOf(LinkedList l1, void *data){
+	int i,flag;
+	Node* walker = l1.head;
+	int walkerIndex;
+	for (i = 0; i < l1.count-1; i++){	
+		if((char)walker->data == *(char*)data){
+			flag=i;
+			return flag;
+		}
+		walker = walker->next;
+	}
+	return -1;
+}
+
+void * deleteElementAt(LinkedList* l1, int index){
+	int i;
+	Node* walker = (*l1).head;
+	for ( i = 0; i<l1->count-1; i++){
+		if(i==index-1 ){
+			walker->next = walker->next->next;
+		}
+		walker = walker->next; 
+	}
+	return &(walker->data);
+}
+
